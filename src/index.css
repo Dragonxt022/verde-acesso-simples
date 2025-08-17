@@ -9,32 +9,48 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 140 6% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 140 6% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 140 6% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 140 75% 25%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 140 30% 96%;
+    --secondary-foreground: 140 75% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 140 20% 96%;
+    --muted-foreground: 140 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 140 45% 85%;
+    --accent-foreground: 140 75% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 140 20% 88%;
+    --input: 140 20% 95%;
+    --ring: 140 75% 25%;
+
+    /* Verde design tokens */
+    --verde-primary: 140 75% 25%;
+    --verde-secondary: 140 60% 35%;
+    --verde-light: 140 45% 85%;
+    --verde-accent: 140 55% 60%;
+    --verde-dark: 140 85% 15%;
+
+    /* Gradientes */
+    --gradient-verde: linear-gradient(135deg, hsl(var(--verde-primary)), hsl(var(--verde-secondary)));
+    --gradient-verde-light: linear-gradient(135deg, hsl(var(--verde-light)), hsl(var(--verde-accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--verde-primary)) 0%, hsl(var(--verde-secondary)) 50%, hsl(var(--verde-accent)) 100%);
+
+    /* Sombras */
+    --shadow-verde: 0 10px 30px -5px hsl(var(--verde-primary) / 0.3);
+    --shadow-verde-glow: 0 0 40px hsl(var(--verde-accent) / 0.4);
 
     --radius: 0.5rem;
 
