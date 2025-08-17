@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 import { Eye, EyeOff, Shield, Mail } from "lucide-react";
 import logoSvg from "@/assets/logo.svg";
 
@@ -244,12 +245,12 @@ export function LoginForm({ onLogin }: LoginFormProps) {
         </Tabs>
 
         <div className="mt-6 text-center">
-          <a 
-            href="#" 
+          <Link 
+            to="/recover-password"
             className="text-sm text-verde-accent hover:text-verde-primary transition-colors duration-200"
           >
             Esqueceu sua senha?
-          </a>
+          </Link>
         </div>
       </CardContent>
     </Card>
