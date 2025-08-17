@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
 import { Eye, EyeOff, Shield, Mail } from "lucide-react";
+import logoSvg from "@/assets/logo.svg";
 
 const cpfSchema = z.object({
   cpf: z.string()
@@ -94,6 +95,13 @@ export function LoginForm({ onLogin }: LoginFormProps) {
   return (
     <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-verde-light shadow-lg">
       <CardHeader className="text-center">
+        <div className="mb-4">
+          <img 
+            src={logoSvg} 
+            alt="Logo" 
+            className="h-16 w-auto mx-auto mb-4"
+          />
+        </div>
         <CardTitle className="text-2xl font-bold text-verde-dark">Acesso ao Sistema</CardTitle>
         <CardDescription className="text-muted-foreground">
           Entre com seu CPF ou email para continuar
