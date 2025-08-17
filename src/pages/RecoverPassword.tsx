@@ -85,72 +85,84 @@ const RecoverPassword = () => {
 
   if (emailSent) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-verde-light/30 to-verde-accent/20">
-        <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-verde-light shadow-lg">
-          <CardHeader className="text-center">
-            <div className="mb-4">
-              <img 
-                src={logoSvg} 
-                alt="Logo" 
-                className="h-16 w-auto mx-auto mb-4"
-              />
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-verde-light/30 to-verde-accent/20 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-verde-primary/10 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-verde-accent/10 rounded-full animate-pulse [animation-delay:2s]"></div>
+      </div>
+      
+      <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-verde-light shadow-lg animate-scale-in hover-lift relative z-10">
+        <CardHeader className="text-center animate-fade-in">
+          <div className="mb-4 animate-bounce-in">
+            <img 
+              src={logoSvg} 
+              alt="Logo" 
+              className="h-16 w-auto mx-auto mb-4 hover-scale"
+            />
+          </div>
+          <CardTitle className="text-2xl font-bold text-verde-dark animate-slide-up">Email Enviado!</CardTitle>
+          <CardDescription className="text-muted-foreground animate-slide-up [animation-delay:0.1s]">
+            Verifique sua caixa de entrada e siga as instruções para redefinir sua senha.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="animate-slide-up [animation-delay:0.2s]">
+          <div className="space-y-4">
+            <div className="text-center p-6 bg-verde-light/20 rounded-lg hover-glow transition-all duration-300 animate-fade-in [animation-delay:0.3s]">
+              <Mail className="w-12 h-12 text-verde-primary mx-auto mb-4 hover-scale animate-pulse" />
+              <p className="text-sm text-muted-foreground">
+                Se você não receber o email em alguns minutos, verifique sua pasta de spam.
+              </p>
             </div>
-            <CardTitle className="text-2xl font-bold text-verde-dark">Email Enviado!</CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Verifique sua caixa de entrada e siga as instruções para redefinir sua senha.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="text-center p-6 bg-verde-light/20 rounded-lg">
-                <Mail className="w-12 h-12 text-verde-primary mx-auto mb-4" />
-                <p className="text-sm text-muted-foreground">
-                  Se você não receber o email em alguns minutos, verifique sua pasta de spam.
-                </p>
-              </div>
-              
-              <Button
-                asChild
-                variant="outline"
-                className="w-full border-verde-light hover:bg-verde-light/20"
-              >
-                <Link to="/">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  Voltar ao Login
-                </Link>
-              </Button>
-            </div>
-          </CardContent>
+            
+            <Button
+              asChild
+              variant="outline"
+              className="w-full border-verde-light hover:bg-verde-light/20 hover-lift transition-all duration-300 animate-fade-in [animation-delay:0.4s]"
+            >
+              <Link to="/">
+                <ArrowLeft className="w-4 h-4 mr-2 hover-rotate transition-transform duration-300" />
+                Voltar ao Login
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
         </Card>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-verde-light/30 to-verde-accent/20">
-      <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-verde-light shadow-lg">
-        <CardHeader className="text-center">
-          <div className="mb-4">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-verde-light/30 to-verde-accent/20 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-verde-primary/10 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-verde-accent/10 rounded-full animate-pulse [animation-delay:2s]"></div>
+      </div>
+      
+      <Card className="w-full max-w-md mx-auto bg-card/80 backdrop-blur-sm border-verde-light shadow-lg animate-scale-in hover-lift relative z-10">
+        <CardHeader className="text-center animate-fade-in">
+          <div className="mb-4 animate-bounce-in">
             <img 
               src={logoSvg} 
               alt="Logo" 
-              className="h-16 w-auto mx-auto mb-4"
+              className="h-16 w-auto mx-auto mb-4 hover-scale"
             />
           </div>
-          <CardTitle className="text-2xl font-bold text-verde-dark">Recuperar Senha</CardTitle>
-          <CardDescription className="text-muted-foreground">
+          <CardTitle className="text-2xl font-bold text-verde-dark animate-slide-up">Recuperar Senha</CardTitle>
+          <CardDescription className="text-muted-foreground animate-slide-up [animation-delay:0.1s]">
             Digite seu CPF ou email para receber instruções de recuperação
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="animate-slide-up [animation-delay:0.2s]">
           <Tabs defaultValue="email" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-6">
-              <TabsTrigger value="email" className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+            <TabsList className="grid w-full grid-cols-2 mb-6 hover-glow transition-all duration-300">
+              <TabsTrigger value="email" className="flex items-center gap-2 hover-scale transition-all duration-200">
+                <Mail className="w-4 h-4 transition-transform duration-200 group-hover:rotate-12" />
                 Email
               </TabsTrigger>
-              <TabsTrigger value="cpf" className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
+              <TabsTrigger value="cpf" className="flex items-center gap-2 hover-scale transition-all duration-200">
+                <Shield className="w-4 h-4 transition-transform duration-200 group-hover:rotate-12" />
                 CPF
               </TabsTrigger>
             </TabsList>
@@ -164,7 +176,7 @@ const RecoverPassword = () => {
                     type="email"
                     placeholder="seu@email.com"
                     {...emailForm.register("email")}
-                    className="focus:ring-verde-primary focus:border-verde-primary"
+                    className="focus-ring hover:border-verde-accent/60 transition-all duration-300"
                   />
                   {emailForm.formState.errors.email && (
                     <p className="text-sm text-destructive">
@@ -175,10 +187,17 @@ const RecoverPassword = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-verde-primary to-verde-secondary hover:from-verde-secondary hover:to-verde-primary transition-all duration-300 shadow-md"
+                  className="w-full bg-gradient-to-r from-verde-primary to-verde-secondary hover:from-verde-secondary hover:to-verde-primary transition-all duration-300 shadow-md btn-glow hover-lift active:scale-95"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Enviando..." : "Enviar Email de Recuperação"}
+                  {isLoading ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Enviando...
+                    </div>
+                  ) : (
+                    "Enviar Email de Recuperação"
+                  )}
                 </Button>
               </form>
             </TabsContent>
@@ -196,7 +215,7 @@ const RecoverPassword = () => {
                       e.target.value = formatted;
                       cpfForm.setValue("cpf", formatted);
                     }}
-                    className="focus:ring-verde-primary focus:border-verde-primary"
+                    className="focus-ring hover:border-verde-accent/60 transition-all duration-300"
                   />
                   {cpfForm.formState.errors.cpf && (
                     <p className="text-sm text-destructive">
@@ -207,23 +226,30 @@ const RecoverPassword = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-verde-primary to-verde-secondary hover:from-verde-secondary hover:to-verde-primary transition-all duration-300 shadow-md"
+                  className="w-full bg-gradient-to-r from-verde-primary to-verde-secondary hover:from-verde-secondary hover:to-verde-primary transition-all duration-300 shadow-md btn-glow hover-lift active:scale-95"
                   disabled={isLoading}
                 >
-                  {isLoading ? "Enviando..." : "Enviar Instruções"}
+                  {isLoading ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Enviando...
+                    </div>
+                  ) : (
+                    "Enviar Instruções"
+                  )}
                 </Button>
               </form>
             </TabsContent>
           </Tabs>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center animate-fade-in [animation-delay:0.4s]">
             <Button
               asChild
               variant="ghost"
-              className="text-verde-accent hover:text-verde-primary hover:bg-verde-light/20 transition-colors duration-200"
+              className="text-verde-accent hover:text-verde-primary hover:bg-verde-light/20 transition-all duration-300 link-underline hover-scale"
             >
               <Link to="/">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+                <ArrowLeft className="w-4 h-4 mr-2 hover-rotate transition-transform duration-300" />
                 Voltar ao Login
               </Link>
             </Button>

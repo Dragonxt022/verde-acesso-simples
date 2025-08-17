@@ -127,14 +127,14 @@ export function LoginForm({ onLogin }: LoginFormProps) {
                 <Label htmlFor="cpf">CPF</Label>
                 <Input
                   id="cpf"
-                  placeholder="000.000.000-00"
-                  {...cpfForm.register("cpf")}
-                  onChange={(e) => {
-                    const formatted = formatCPF(e.target.value);
-                    e.target.value = formatted;
-                    cpfForm.setValue("cpf", formatted);
-                  }}
-                  className="focus:ring-verde-primary focus:border-verde-primary"
+                    placeholder="000.000.000-00"
+                    {...cpfForm.register("cpf")}
+                    onChange={(e) => {
+                      const formatted = formatCPF(e.target.value);
+                      e.target.value = formatted;
+                      cpfForm.setValue("cpf", formatted);
+                    }}
+                    className="focus-ring hover:border-verde-accent/60 transition-all duration-300"
                 />
                 {cpfForm.formState.errors.cpf && (
                   <p className="text-sm text-destructive">
@@ -193,7 +193,7 @@ export function LoginForm({ onLogin }: LoginFormProps) {
                   type="email"
                   placeholder="seu@email.com"
                   {...emailForm.register("email")}
-                  className="focus:ring-verde-primary focus:border-verde-primary"
+                  className="focus-ring hover:border-verde-accent/60 transition-all duration-300"
                 />
                 {emailForm.formState.errors.email && (
                   <p className="text-sm text-destructive">
